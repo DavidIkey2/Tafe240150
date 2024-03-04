@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Calculator.MainMenu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel>
+			<TextBlock FontSize="60" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Blue">Universal Calculator</TextBlock>
+
+			<Button x:Name="mathsCalculatorButton" Width="500" Height="80" Content="Maths Calculator" HorizontalAlignment="Center" FontSize="50" Padding="5" Margin="10" Click="mathsCalculatorButton_Click"/>
+            <Button x:Name="mortgageCalculatorButton" Width="500" Height="80" Content="Mortgage Calculator" HorizontalAlignment="Center" FontSize="50" Padding="5" Margin="10" Click="mortgageCalculatorButton_Click"/>
+            <Button x:Name="currencyConverterButton" Width="500" Height="80" Content="Currency Converter" HorizontalAlignment="Center" FontSize="50" Padding="5" Margin="10" Click="currencyConverterButton_Click"></Button>
+			<Button x:Name="exitButton" Width="500" Height="80" Content="Exit" HorizontalAlignment="Center" FontSize="50"  Padding="5" Margin="10" Click="exitButton_Click"></Button>
+			<Image Source="/images/abacus.png" Width="500" Margin="10"></Image>
+		</StackPanel>
+
+	</Grid>
+</Page>
