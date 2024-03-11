@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="Calculator.CurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+		<StackPanel>
+			<TextBlock FontSize="60" HorizontalAlignment="Center" FontWeight="Bold" Foreground="Blue" Padding="5" Margin="10">Currency Conversion Calculator</TextBlock>
+			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+				<StackPanel Width="300">
+					<TextBlock FontSize="60" Padding="5" Margin="10">Amount $</TextBlock>
+				</StackPanel>
+				<StackPanel Width="300">
+					<TextBlock FontSize="60" Padding="5" Margin="10">From</TextBlock>
+					<ComboBox x:Name="convertFromComboBox" PlaceholderText="Convert From" Height="60" FontSize="40" Width="300" Foreground="#C9A13F" HorizontalAlignment="Center">
+						<ComboBoxItem Content="1 year warranty at no cost"/>
+						<ComboBoxItem Content="2 year warranty at 5% of vehicle cost"/>
+						<ComboBoxItem Content="3 year warranty at 10% of vehicle cost"/>
+						<ComboBoxItem Content="5 year warranty at 20% of vehicle cost"/>
+					</ComboBox>
+				</StackPanel>
+				<StackPanel Width="300">
+					<TextBlock FontSize="60" Padding="5" Margin="10">To</TextBlock>
+					<ComboBox x:Name="convertToComboBox" PlaceholderText="Convert To" Height="60" FontSize="40" Width="300" Foreground="#C9A13F" HorizontalAlignment="Center">
+						<ComboBoxItem Content="1 year warranty at no cost"/>
+						<ComboBoxItem Content="2 year warranty at 5% of vehicle cost"/>
+						<ComboBoxItem Content="3 year warranty at 10% of vehicle cost"/>
+						<ComboBoxItem Content="5 year warranty at 20% of vehicle cost"/>
+					</ComboBox>
+				</StackPanel>
+			</StackPanel>
+		</StackPanel>
+
+	</Grid>
+</Page>
