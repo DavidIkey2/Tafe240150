@@ -14,26 +14,33 @@
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 				<StackPanel Width="300">
 					<TextBlock FontSize="60" Padding="5" Margin="10">Amount $</TextBlock>
+					<TextBox x:Name="amountTextBox" PlaceholderText="Enter Amount" Height="60" FontSize="40" Width="300"></TextBox>
 				</StackPanel>
 				<StackPanel Width="300">
 					<TextBlock FontSize="60" Padding="5" Margin="10">From</TextBlock>
-					<ComboBox x:Name="convertFromComboBox" PlaceholderText="Convert From" Height="60" FontSize="40" Width="300" Foreground="#C9A13F" HorizontalAlignment="Center">
-						<ComboBoxItem Content="1 year warranty at no cost"/>
-						<ComboBoxItem Content="2 year warranty at 5% of vehicle cost"/>
-						<ComboBoxItem Content="3 year warranty at 10% of vehicle cost"/>
-						<ComboBoxItem Content="5 year warranty at 20% of vehicle cost"/>
+					<ComboBox x:Name="convertFromComboBox" PlaceholderText="Convert From" Height="60" FontSize="40" Width="300">
+						<ComboBoxItem IsSelected="True">US Dollar</ComboBoxItem>
+						<ComboBoxItem>Euro</ComboBoxItem>
+						<ComboBoxItem>British Pound</ComboBoxItem>
+						<ComboBoxItem>Indian Rupee</ComboBoxItem>
 					</ComboBox>
 				</StackPanel>
 				<StackPanel Width="300">
 					<TextBlock FontSize="60" Padding="5" Margin="10">To</TextBlock>
-					<ComboBox x:Name="convertToComboBox" PlaceholderText="Convert To" Height="60" FontSize="40" Width="300" Foreground="#C9A13F" HorizontalAlignment="Center">
-						<ComboBoxItem Content="1 year warranty at no cost"/>
-						<ComboBoxItem Content="2 year warranty at 5% of vehicle cost"/>
-						<ComboBoxItem Content="3 year warranty at 10% of vehicle cost"/>
-						<ComboBoxItem Content="5 year warranty at 20% of vehicle cost"/>
+					<ComboBox x:Name="convertToComboBox" PlaceholderText="Convert To" Height="60" FontSize="40" Width="300">
+						<ComboBoxItem IsSelected="True">US Dollar</ComboBoxItem>
+						<ComboBoxItem>Euro</ComboBoxItem>
+						<ComboBoxItem>British Pound</ComboBoxItem>
+						<ComboBoxItem>Indian Rupee</ComboBoxItem>
 					</ComboBox>
 				</StackPanel>
 			</StackPanel>
+			<TextBlock x:Name="amountTextBlock" FontSize="30" Padding="5" Margin="10"></TextBlock>
+			<TextBlock x:Name="convertedAmountTextBlock" FontSize="40" Padding="5" Margin="10"></TextBlock>
+			<TextBlock x:Name="fromRateTextBlock" FontSize="30" Padding="5" Margin="10"></TextBlock>
+			<TextBlock x:Name="toRateTextBlock" FontSize="30" Padding="5" Margin="10"></TextBlock>
+			<Button x:Name="currencyConversionButton" Content="Currency Conversion" Height="70" Width="600" FontSize="40" HorizontalAlignment="Center" Padding="5" Margin="10" Click="currencyConversionButton_Click"></Button>
+			<Button x:Name="exitButton" Content="Exit" Height="70" Width="600" FontSize="40" HorizontalAlignment="Center" Padding="5" Margin="10" Click="exitButton_Click"></Button>
 		</StackPanel>
 
 	</Grid>
