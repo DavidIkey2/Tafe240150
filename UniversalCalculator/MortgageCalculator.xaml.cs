@@ -26,5 +26,40 @@ namespace Calculator
 		{
 			this.InitializeComponent();
 		}
+
+		private void calculateButton_Click(object sender, RoutedEventArgs e)
+		{
+			// Calculate monthly interest rate
+
+			monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR;
+
+
+
+			monthlyInterestRate = monthlyInterestRate * 0.01;
+
+
+
+			// Calculate number of months
+
+			numberOfMonths = (years * 12) + months;
+
+
+
+			// Calculate NUMERATOR of Monthly Repayment Calculation
+
+			monthlyRepaymentCalculationNumerator = principal * (Math.Pow(1 + monthlyInterestRate, numberOfMonths)) * monthlyInterestRate;
+
+
+
+			// Calculate Denominator of Monthly Repayment Calculation
+
+			monthlyRepaymentCalculationDenominator = Math.Pow(1 + monthlyInterestRate, numberOfMonths) - 1;
+
+
+
+			// Calculate Monthly Repayment
+
+			monthlyRepayment = monthlyRepaymentCalculationNumerator / monthlyRepaymentCalculationDenominator;
+		}
 	}
 }

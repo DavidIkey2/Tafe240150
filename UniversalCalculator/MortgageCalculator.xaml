@@ -13,7 +13,7 @@
 			<TextBlock x:Name="headerTextBlock" Text="Mortgage Calculator" FontSize="48" FontWeight="Bold" TextAlignment="Center" Margin="10"/>
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 				<TextBlock x:Name="principalBorrowTextBlock" Text="Principal Borrow $:" VerticalAlignment="Center" Margin="10"/>
-				<TextBox x:Name="principalBorrowTextBox" Margin="10" Width="200" TextChanged="principalBorrowTextBox_TextChanged"/>
+				<TextBox x:Name="principalBorrowTextBox" Margin="10" Width="200"/>
 			</StackPanel>
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
 				<TextBlock x:Name="yearsTextBlock" Text="Years:" VerticalAlignment="Center" Margin="10"/>
@@ -33,9 +33,9 @@
 			</StackPanel>
 			<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
 				<TextBlock x:Name="monthlyRepayTextBlock" Text="Monthly Repayment $:" VerticalAlignment="Center" Margin="10"/>
-				<TextBox x:Name="monthlyRepayTextBox" Margin="10" Width="200"/>
+				<TextBox x:Name="monthlyRepayTextBox" Margin="10" Width="200" IsReadOnly="True"/>
 			</StackPanel>
-			<Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Center" Margin="10" FontSize="48"/>
+			<Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Center" Margin="10" FontSize="48" Click="calculateButton_Click"/>
 			<Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Center" Margin="10" FontSize="48"/>
 		</StackPanel>
 	</Grid>
