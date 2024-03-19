@@ -29,6 +29,23 @@ namespace Calculator
 
 		private void calculateButton_Click(object sender, RoutedEventArgs e)
 		{
+
+			const int MONTHS_IN_YEAR = 12;
+			double principal;
+			int years;
+			int months;
+			double annualInterestRate;
+			int numberOfMonths;
+			double monthlyRepaymentCalculationNumerator;
+			double monthlyRepaymentCalculationDenominator;
+			double monthlyRepayment;
+			double monthlyInterestRate;
+
+			principal = double.Parse(principalBorrowTextBox.Text);
+			years = int.Parse(yearsTextBox.Text);
+			months = int.Parse(monthsTextBox.Text);
+			annualInterestRate = double.Parse(yInterestRateTextBox.Text);
+
 			// Calculate monthly interest rate
 
 			monthlyInterestRate = annualInterestRate / MONTHS_IN_YEAR;
@@ -36,6 +53,7 @@ namespace Calculator
 
 
 			monthlyInterestRate = monthlyInterestRate * 0.01;
+			mInterestRateTextBox.Text = monthlyInterestRate.ToString();
 
 
 
@@ -60,6 +78,7 @@ namespace Calculator
 			// Calculate Monthly Repayment
 
 			monthlyRepayment = monthlyRepaymentCalculationNumerator / monthlyRepaymentCalculationDenominator;
+			monthlyRepayTextBox.Text = monthlyRepayment.ToString("C");
 		}
 	}
 }
