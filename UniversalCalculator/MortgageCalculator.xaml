@@ -36,7 +36,7 @@
 				<TextBox x:Name="monthlyRepayTextBox" Margin="10" Width="200" IsReadOnly="True"/>
 			</StackPanel>
 			<Button x:Name="calculateButton" Content="Calculate" HorizontalAlignment="Center" Margin="10" FontSize="48" Click="calculateButton_Click"/>
-			<Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Center" Margin="10" FontSize="48"/>
+			<Button x:Name="exitButton" Content="Exit" HorizontalAlignment="Center" Margin="10" FontSize="48" Click="exitButton_Click"/>
 		</StackPanel>
 	</Grid>
 </Page>

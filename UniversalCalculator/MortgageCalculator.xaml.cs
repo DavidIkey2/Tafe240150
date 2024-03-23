@@ -80,5 +80,10 @@ namespace Calculator
 			monthlyRepayment = monthlyRepaymentCalculationNumerator / monthlyRepaymentCalculationDenominator;
 			monthlyRepayTextBox.Text = monthlyRepayment.ToString("C");
 		}
+
+		private void exitButton_Click(object sender, RoutedEventArgs e)
+		{
+			Frame.Navigate(typeof(MainMenu));
+		}
 	}
 }
